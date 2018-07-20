@@ -1,8 +1,9 @@
 package com.mp.designpattern.observer;
 
 /**
- * Created by panmin on 16-12-22.
+ * Created by minpan on 2018/7/20.
  */
-public interface Observer {
-    void update();
+public abstract class Observer {
+    protected Subject subject;
+    public abstract void update(int state);
 }
