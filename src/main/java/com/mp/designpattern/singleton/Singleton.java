@@ -6,6 +6,8 @@ package com.mp.designpattern.singleton;
 public class Singleton {
     private static volatile Singleton instance = null;
 
+    private Singleton() {}
+
     /**
      * double valid
      * @return
