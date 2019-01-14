@@ -1,5 +1,7 @@
 package com.mp.sort;
 
+import com.mp.util.ArrayUtils;
+
 public class HeapSort {
 	public static void main(String[] args) {
 //		int[] array = { 9, 8, 7, 6, 5, 4, 3, 2, 1, 0, -1, -2, -3 };
