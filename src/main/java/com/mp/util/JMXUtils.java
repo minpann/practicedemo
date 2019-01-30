@@ -1,8 +1,7 @@
 package com.mp.util;
 
 import com.sun.management.OperatingSystemMXBean;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import lombok.extern.slf4j.Slf4j;
 
 import javax.management.MBeanServerConnection;
 import javax.management.ObjectInstance;
@@ -20,8 +19,8 @@ import java.util.concurrent.TimeUnit;
 /**
  * Created by panmin on 16-12-7.
  */
+@Slf4j
 public class JMXUtils {
-    private static final Logger logger = LoggerFactory.getLogger(JMXUtils.class);
     private static final String JMX_DEFAULT_HOST = "localhost";
     private static final String JMX_DEFAULT_PORT = "1099";
     private static MBeanServerConnection mbsc = null;
@@ -225,7 +224,7 @@ public class JMXUtils {
             try {
                 TimeUnit.SECONDS.sleep(1);
             } catch (InterruptedException e) {
-                logger.error("Interrupted Exception occurred while Cpu collector sleeping...");
+                log.error("Interrupted Exception occurred while Cpu collector sleeping...");
             }
             long end = System.currentTimeMillis();
             long endT = opMXbean.getProcessCpuTime();

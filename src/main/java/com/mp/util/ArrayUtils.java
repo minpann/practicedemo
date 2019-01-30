@@ -1,4 +1,4 @@
-package com.mp.sort;
+package com.mp.util;
 
 public class ArrayUtils {
 	
