@@ -1,4 +1,4 @@
-package java.com.mp;
+package com.mp;
 
 import com.mp.system.SystemInfoUtil;
 import org.junit.Test;
