@@ -1,9 +1,12 @@
 package com.mp.designpattern.factory.abstractfactory;
 
-import com.mp.designpattern.factory.abstractfacotry.FactoryBMW320;
-import com.mp.designpattern.factory.abstractfacotry.FactoryBMW520;
-import com.mp.designpattern.factory.vo.BMW320;
-import com.mp.designpattern.factory.vo.BMW520;
+import com.mp.designpattern.factory.abstractfacotry.BMW520Factory;
+import com.mp.designpattern.factory.abstractfacotry.BMW523Factory;
+import com.mp.designpattern.factory.abstractfacotry.BMWAbstractFactory;
+import com.mp.designpattern.factory.model.AirCondition;
+import com.mp.designpattern.factory.model.BMW532;
+import com.mp.designpattern.factory.model.BMW520;
+import com.mp.designpattern.factory.model.Engine;
 import org.junit.Test;
 
 /**
@@ -12,10 +15,12 @@ import org.junit.Test;
 public class AbstractFacotryTest {
     @Test
     public void Customer() {
-        FactoryBMW320 factoryBMW320 = new FactoryBMW320();
-        BMW320 bmw320 = factoryBMW320.createBMW();
+        BMWAbstractFactory factoryBMW520 = new BMW520Factory();
+        Engine engineA = factoryBMW520.createEngine();
+        AirCondition airConditionA = factoryBMW520.createAirCondition();
 
-        FactoryBMW520 factoryBMW520 = new FactoryBMW520();
-        BMW520 bmw520 = factoryBMW520.createBMW();
+        BMWAbstractFactory factoryBMW523 = new BMW523Factory();
+        Engine engineB = factoryBMW523.createEngine();
+        AirCondition airConditionB = factoryBMW523.createAirCondition();
     }
 }

@@ -1,8 +1,6 @@
 package com.mp.designpattern.factory.simplefactory;
 
-import com.mp.designpattern.factory.vo.BMW;
-import com.mp.designpattern.factory.vo.BMW320;
-import com.mp.designpattern.factory.vo.BMW520;
+import com.mp.designpattern.factory.model.BMW;
 import org.junit.Test;
 
 /**
@@ -11,8 +9,9 @@ import org.junit.Test;
 public class SimpleFactoryTest {
     @Test
     public void Customer(){
-        SimpleFactory factory = new SimpleFactory();
-        BMW bmw320 = new BMW320();
-        BMW bmw520 = new BMW520();
+        SimpleFactory factory = new BMW520Factory();
+        BMW bmw520 = factory.createBMW();
+        factory = new BMW523Factory();
+        BMW bmw532 = factory.createBMW();
     }
 }
